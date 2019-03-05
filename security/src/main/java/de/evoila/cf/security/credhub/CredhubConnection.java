@@ -53,7 +53,7 @@ public class CredhubConnection {
                 new SSLContextBuilder()
                     .loadTrustMaterial(null, new TrustSelfSignedStrategy())
                     .loadKeyMaterial(keyStoreHandler.getKeyStore(
-                            credhubBean.getCertificate().getCert(),
+                            credhubBean.getCertificate().getCertificate(),
                             credhubBean.getCertificate().getPrivateKey(),
                             credhubBean.getCertificate().getCa(),
                             credhubBean.getKeystorePassword()), credhubBean.getKeystorePassword().toCharArray())
