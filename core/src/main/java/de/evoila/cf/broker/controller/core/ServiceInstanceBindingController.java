@@ -98,7 +98,7 @@ public class ServiceInstanceBindingController extends BaseController {
 		log.debug("ServiceInstanceBinding Deleted: " + bindingId);
 
 		if (acceptsIncomplete) {
-			return new ResponseEntity<>("{\"Unbind in progress\"}", HttpStatus.ACCEPTED);
+			return new ResponseEntity<>("{}", HttpStatus.ACCEPTED);
 		} else {
 			return new ResponseEntity<>("{}", HttpStatus.OK);
 		}
