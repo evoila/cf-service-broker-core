@@ -28,11 +28,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
+                <dependency>
+                    <groupId>javax.validation</groupId>
+                    <artifactId>validation-api</artifactId>
+                </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
 		<dependency>
 		    <groupId>com.github.java-json-tools</groupId>
 		    <artifactId>json-schema-validator</artifactId>
