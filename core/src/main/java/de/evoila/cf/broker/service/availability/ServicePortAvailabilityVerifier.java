@@ -79,6 +79,16 @@ public class ServicePortAvailabilityVerifier implements ServiceInstanceAvailabil
 		return available;
 	}
 
+	public boolean verifyServiceAvailability(ServiceInstance serviceInstance, int port, boolean useInitialTimeout) {
+		List<ServerAddress> serverAddresses = serviceInstance.getHosts();
+		for (ServerAddress serverAddress : serverAddresses) {
+			if (!verifyServiceAvailability(serverAddress.getIp(), port, useInitialTimeout)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	public boolean verifyServiceAvailability(ServiceInstance serviceInstance, boolean useInitialTimeout) {
 		List<ServerAddress> serverAddresses = serviceInstance.getHosts();
 		for (ServerAddress serverAddress : serverAddresses) {
